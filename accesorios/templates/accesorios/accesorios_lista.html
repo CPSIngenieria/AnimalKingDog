@@ -1,0 +1,12 @@
+{% extends "landing/base.html" %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Accesorios - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'accesorios/css/accesorios_lista.css' %}">
+<script src="{% static 'accesorios/js/accesorios_lista.js' %}"></script>
+{% endblock statics %}
