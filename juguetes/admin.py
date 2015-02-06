@@ -1,3 +1,8 @@
 from django.contrib import admin
+from juguetes.models import Pelota
 
-# Register your models here.
+class PelotaAdmin(admin.ModelAdmin):
+	list_display = ('nombre', 'precio', 'descripcion', 'boton_admin', 'foto_admin')
+	search_fields = ['nombre','descripcion']
+
+admin.site.register(Pelota, PelotaAdmin)

@@ -90,4 +90,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/akd/webapp/static/'
 
+MEDIA_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['media'])
+MEDIA_URL = '/media/'
+
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
