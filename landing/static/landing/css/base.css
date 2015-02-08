@@ -70,13 +70,11 @@ nav a
 
 #menu-accesorios li
 {
-	font-size: 1.2rem;
 	padding: 0.2rem 1.9rem 0.2rem 1rem;
 }
 
 #menu-juguetes li
 {
-	font-size: 1.2rem;
 	padding: 0.2rem 1.9rem 0.2rem 1rem;
 }
 
@@ -89,13 +87,21 @@ nav a
 .dropdown-child
 {
 	background: rgba(0,0,0,0.8);
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 400;
+	border-bottom: 1px gray solid; 
+}
+
+.dropdown-child:hover
+{
+	background: rgba(100,100,100,0.8);
 }
 
 .link-menu
 {
 	display: inline-block;
 	margin-top: 1em;
-	padding: 1.85em 0;
 	position: relative;
 	text-align: center;
 	width: 19%;
@@ -106,10 +112,11 @@ nav a
 	background: black;
 }
 
-.link-menu li
+.menu-title
 {
 	font-size: 1.3em;
 	font-style: italic;
 	font-weight: 500;
+	padding: 1.85rem 0;
 }
 
