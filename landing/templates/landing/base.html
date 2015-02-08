@@ -74,6 +74,8 @@
 	</section>
 	{% endblock banner%}
 	
+	{% block content %} {% endblock content %}
+
 	{% block footer %}
 	<footer>
 		<section>
@@ -84,7 +86,7 @@
 					<li><a href="{% url 'accesorios:lista_pecheras' %}">Pecheras</a></li>
 					<li><a href="{% url 'accesorios:lista_collares' %}">Collares</a></li>
 					<li><a href="{% url 'accesorios:lista_chalecos' %}">Chalecos</a></li>
-					<li><a href="{% url 'accesorios:lista_correas' %}">Pelotas</a></li>
+					<li><a href="{% url 'juguetes:lista_pelotas' %}">Pelotas</a></li>
 				</ul>
 			</article>
 			<article class="footer-section">
