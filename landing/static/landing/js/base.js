@@ -48,7 +48,6 @@ function recortar_juguetes () {
 function pasar_banner_forzado () {
 	window.clearTimeout(window.timer_banner.timerId_actual());
 	pasar_banner();
-	actuzalizar_progreso_banner();
 }
 
 //Funcion que permite pasar al siguiente banner en la cola:
@@ -113,7 +112,6 @@ function retroceder_banner () {
 	//Reinicia el timer_banner:
 	window.clearTimeout(window.timer_banner.timerId_actual());
 	window.timer_banner = new Timer( pasar_banner, TIEMPO_BANNER );
-	actuzalizar_progreso_banner();
 }
 
 //Clase utilitaria que controla el tiempo de cada banner:
@@ -145,14 +143,11 @@ function Timer(callback, delay) {
 
 //Funcion que reanuda la cuenta del tiempo de banner:
 function reanudar_timer () {
-
-	window.idDemonio = window.setInterval(actuzalizar_progreso_banner, TIEMPO_DEMONIO);
 	window.timer_banner.resume();
 }
 
 //Funcion que pausa la cuenta del tiempo de banner:
 function pausar_timer () {
-	$('.boton-banner').fadeIn();
 	window.clearInterval(window.idDemonio);
 	window.timer_banner.pause();
 }
