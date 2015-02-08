@@ -14,6 +14,7 @@
 </head>
 <body>
 	<div id="wrapper">
+
 	{% block header %}
 	<header>
 		<h1>
@@ -53,6 +54,26 @@
 		</nav>
 	</header>
 	{% endblock header %}
+
+	{% block banner%} 
+	<section id="banner">
+		<article class="banner-image" id="banner-1">
+			<img src="{% static 'landing/img/banner-1.jpg' %}" alt="" width="900" height="280">
+		</article>
+		<article class="banner-image" id="banner-2">
+			<img src="{% static 'landing/img/banner-1.jpg' %}" alt="" width="900" height="280">
+		</article>
+		<article class="banner-image" id="banner-3">
+			<img src="{% static 'landing/img/banner-1.jpg' %}" alt="" width="900" height="280">
+		</article>
+		<div id="banner-bar">
+			<div class="banner-bar-indicator" id="indicator-1"></div>
+			<div class="banner-bar-indicator" id="indicator-2"></div>
+			<div class="banner-bar-indicator" id="indicator-3"></div>
+		</div>
+	</section>
+	{% endblock banner%}
+
 	</div>
 </body>
 </html>

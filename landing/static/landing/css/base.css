@@ -1,9 +1,11 @@
 body
 {
+	background: yellow;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 h1
@@ -30,7 +32,8 @@ h1 img
 header
 {
 	background: gray;
-	height: 100px;
+	height: 80px;
+	position: relative;
 	text-align: center;
 }
 
@@ -58,13 +61,41 @@ nav a
 	text-decoration: none;
 }
 
+#banner
+{
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 90%;
+	z-index: -1;
+}
+
+#banner:before
+{
+	content: "";
+	display: block;
+	padding-top: 30%;
+}
+
+#banner-bar
+{
+	background: rgba(20,20,20,0.5);
+	bottom: -0.1em;
+	margin: 0 auto;
+	padding-bottom: 0.2em;
+	padding-top: 0.5em;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
 #menu-accesorios, #menu-juguetes
 {
 	height: 0;
 	overflow: hidden;
 	position: absolute;
 	text-align: left;
-	top: 84px;
+	top: 64px;
 	transition: all ease 0.2s;
 }
 
@@ -79,18 +110,35 @@ nav a
 }
 
 #wrapper
-{
+{	
 	margin: 0 auto;
 	max-width: 1000px;
+}
+
+.banner-bar-indicator
+{	
+	background: white;
+	display: inline-block;
+	height: 15px;
+	vertical-align: top;
+	width: 15px;
+	border-radius: 50%;
+}
+
+.banner-image
+{
+	position: absolute;
+	top: 0em;
+	transition: all ease 0.5s;
 }
 
 .dropdown-child
 {
 	background: rgba(0,0,0,0.8);
+	border-bottom: 1px gray solid; 
 	font-size: 1rem;
 	font-style: italic;
 	font-weight: 400;
-	border-bottom: 1px gray solid; 
 }
 
 .dropdown-child:hover
@@ -117,6 +165,5 @@ nav a
 	font-size: 1.3em;
 	font-style: italic;
 	font-weight: 500;
-	padding: 1.85rem 0;
+	padding: 1.25rem 0;
 }
-
