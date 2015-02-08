@@ -8,6 +8,21 @@ body
 	text-align: center;
 }
 
+footer
+{
+	background: gray;
+}
+
+footer form
+{
+	text-align: left;
+}
+
+footer form p
+{
+	color: white;
+}
+
 h1
 {
 	display: inline-block;
@@ -118,11 +133,11 @@ nav ul
 .banner-bar-indicator
 {	
 	background: white;
+	border-radius: 50%;
 	display: inline-block;
 	height: 15px;
 	vertical-align: top;
 	width: 15px;
-	border-radius: 50%;
 }
 
 .banner-image
@@ -146,6 +161,55 @@ nav ul
 	background: rgba(100,100,100,0.8);
 }
 
+.footer-section
+{
+	display: inline-block;
+	padding-left: 1.5em;
+	padding-bottom: 1em;
+	text-align: left;
+	vertical-align: top;
+	width: 28%;
+}
+
+.footer-section:last-child
+{
+	text-align: center;
+}
+
+.footer-section:last-child figure
+{
+	margin: 1em 0.1em;
+}
+
+.footer-section ul
+{
+	list-style: none;
+	margin: 0;
+	padding-bottom: 1em;
+	padding: 0;
+}
+
+.footer-section ul li
+{
+	padding: 0.2rem;
+}
+
+.footer-section ul li a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.footer-section ul li a:hover
+{
+	text-decoration: underline;
+}
+
+.footer-title
+{
+	font-weight: 400;
+}
+
 .link-menu
 {
 	display: inline-block;
@@ -166,4 +230,11 @@ nav ul
 	font-style: italic;
 	font-weight: 500;
 	padding: 1.25rem 0;
+}
+
+.terms
+{
+	color: white;
+	font-size: 0.8rem;
+	margin: 0;
 }

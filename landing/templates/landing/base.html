@@ -73,6 +73,41 @@
 		</div>
 	</section>
 	{% endblock banner%}
+	
+	{% block footer %}
+	<footer>
+		<section>
+			<article class="footer-section">
+				<h3 class="footer-title">Productos</h3>
+				<ul>
+					<li><a href="{% url 'accesorios:lista_correas' %}">Correas</a></li>
+					<li><a href="{% url 'accesorios:lista_pecheras' %}">Pecheras</a></li>
+					<li><a href="{% url 'accesorios:lista_collares' %}">Collares</a></li>
+					<li><a href="{% url 'accesorios:lista_chalecos' %}">Chalecos</a></li>
+					<li><a href="{% url 'accesorios:lista_correas' %}">Pelotas</a></li>
+				</ul>
+			</article>
+			<article class="footer-section">
+				<h3 class="footer-title">Contactanos</h3>
+				<form action="{% url 'landing:contactar' %}" method="post">
+					{% csrf_token %}
+					<input type="email" name="email" id="email">
+					<input type="submit" value="">
+					<p>Dejanos tu Email</p>
+				</form>
+			</article>
+			<article class="footer-section">
+				<a href="{% url 'landing:home' %}">
+					<figure>
+						<img src="{% static 'landing/img/logo-grande.png' %}" alt="" width='250' height='110'>
+					</figure>
+				</a>	
+				<p class="terms">Bogota - Colombia</p>
+				<p class="terms">AnimalKingDog Todos los derechos reservados</p>	
+			</article>
+		</section>
+	</footer>
+	{% endblock footer %}
 
 	</div>
 </body>
