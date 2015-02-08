@@ -6,27 +6,53 @@
 	<meta charset="UTF-8">
 	<meta name='description' content='{% block description %} {% endblock description %}'>
 	<title>{% block title %} {% endblock title %}</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'landing/css/base.css' %}">
+	<script src="{% static 'landing/js/jquery.min.js' %}"></script>
+	<script src="{% static 'landing/js/base.js' %}"></script>
 	{% block statics %} {% endblock statics %}
 </head>
 <body>
+	<div id="wrapper">
 	{% block header %}
 	<header>
+		<h1>
+			<a href="{% url 'landing:home' %}">
+				<figure>
+					<img src="{% static 'landing/img/logo-grande.png' %}" alt="" width='300' height='130'>
+				</figure>
+			</a>		
+		</h1>
 		<nav>
-			<h1>
-				<a href="{% url 'landing:home' %}">
-					<img src="{% static 'landing/img/logo.jpg' %}" alt="" width='400' height='130'>
-				</a>		
-			</h1>
 			<ul>
-				<li><a href="{% url 'landing:home' %}">Inicio</a></li>
-				<li><a href="{% url 'accesorios:lista' %}">Accesorios</a></li>
-				<li><a href="#">Juguetes</a></li>
-				<li><a href="#">Nosotros</a></li>
-				<li><a href="#">Contacto</a></li>
+				<div class="link-menu">
+					<a href="{% url 'landing:home' %}"><li>Inicio</li></a>
+				</div>
+				<div class="link-menu accesorios">
+					<a href="{% url 'accesorios:lista' %}"><li>Accesorios</li></a>
+					<div id="menu-accesorios">
+						<a href="{% url 'accesorios:lista_correas' %}"><li class="dropdown-child">Correas</li></a>
+						<a href="{% url 'accesorios:lista_pecheras' %}"><li class="dropdown-child">Pecheras</li></a>
+						<a href="{% url 'accesorios:lista_collares' %}"><li class="dropdown-child">Collares</li></a>
+						<a href="{% url 'accesorios:lista_chalecos' %}"><li class="dropdown-child">Chalecos</li></a>
+					</div>
+				</div>
+				<div class="link-menu juguetes">
+					<a href="#"><li>Juguetes</li></a>
+					<div id="menu-juguetes">
+						<a href="#"><li class="dropdown-child">Pelotas</li></a>
+					</div>
+				</div>
+				<div class="link-menu">
+					<a href="#"><li>Nosotros</li></a>
+				</div>
+				<div class="link-menu">
+					<a href="#"><li>Contacto</li></a>
+				</div>
 			</ul>
 		</nav>
-	</header>	
+	</header>
 	{% endblock header %}
+	</div>
 </body>
 </html>
