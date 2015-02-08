@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'AKD.views.home', name='home'),
     url(r'^', include('landing.urls', namespace='landing')),
     url(r'^accesorios/', include('accesorios.urls', namespace='accesorios')),
+    url(r'^juguetes/', include('juguetes.urls', namespace='juguetes')),
     url(r'^admin/', include(admin.site.urls)),
 )
 if settings.DEBUG:
