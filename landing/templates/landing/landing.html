@@ -10,3 +10,85 @@
 <link rel="stylesheet" href="{% static 'landing/css/landing.css' %}">
 <script src="{% static 'landing/js/landing.js' %}"></script>
 {% endblock statics %}
+
+{% block content%} 
+<section id="correas" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Correas</h2>
+	{% if not correas %}
+	<h2>No hay correas para mostrar</h2>
+	{% else%}
+	{% for correa in correas %}
+	<article class="product-container">
+		<figure>
+			<img src="{{correa.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+	<div class="visit-list-button">
+		<a href="{% url 'accesorios:lista_correas' %}">Ver lista completa</a>
+	</div>
+</section>
+
+<section id="pecheras" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Pecheras</h2>
+	{% if not pecheras %}
+	<h2>No hay pecheras para mostrar</h2>
+	{% else%}
+	{% for pechera in pecheras %}
+	<article class="product-container">
+		<figure>
+			<img src="{{pechera.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+	<div class="visit-list-button">
+		<a href="{% url 'accesorios:lista_pecheras' %}">Ver lista completa</a>
+	</div>
+</section>
+
+<section id="chalecos" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Chalecos</h2>
+	{% if not chalecos %}
+	<h2>No hay chalecos para mostrar</h2>
+	{% else%}
+	{% for chaleco in chalecos %}
+	<article class="product-container">
+		<figure>
+			<img src="{{chaleco.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+	<div class="visit-list-button">
+		<a href="{% url 'accesorios:lista_chalecos' %}">Ver lista completa</a>
+	</div>
+</section>
+
+<section id="collares" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Collares</h2>
+	{% if not collares %}
+	<h2>No hay collares para mostrar</h2>
+	{% else%}
+	{% for collar in collares %}
+	<article class="product-container">
+		<figure>
+			<img src="{{collar.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+	<div class="visit-list-button">
+		<a href="{% url 'accesorios:lista_collares' %}">Ver lista completa</a>
+	</div>
+</section>
+{% endblock content%}

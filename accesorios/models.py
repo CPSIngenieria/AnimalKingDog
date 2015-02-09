@@ -6,6 +6,7 @@ class Correa(models.Model):
 	descripcion = models.TextField()
 	boton_comprar = models.TextField()
 	foto = models.ImageField(upload_to='fotos_correas')
+	fecha_creacion = models.DateTimeField(auto_now_add=True)
 
 	def __unicode__(self):
 		return self.nombre
@@ -24,6 +25,7 @@ class Pechera(models.Model):
 	descripcion = models.TextField()
 	boton_comprar = models.TextField()
 	foto = models.ImageField(upload_to='fotos_pecheras')
+	fecha_creacion = models.DateTimeField(auto_now_add=True)
 
 	def __unicode__(self):
 		return self.nombre
@@ -42,6 +44,7 @@ class Collar(models.Model):
 	descripcion = models.TextField()
 	boton_comprar = models.TextField()
 	foto = models.ImageField(upload_to='fotos_collares')
+	fecha_creacion = models.DateTimeField(auto_now_add=True)
 
 	def __unicode__(self):
 		return self.nombre
@@ -60,7 +63,8 @@ class Chaleco(models.Model):
 	descripcion = models.TextField()
 	boton_comprar = models.TextField()
 	foto = models.ImageField(upload_to='fotos_chalecos')
-
+	fecha_creacion = models.DateTimeField(auto_now_add=True)
+	
 	def __unicode__(self):
 		return self.nombre
 

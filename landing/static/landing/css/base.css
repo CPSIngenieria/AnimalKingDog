@@ -1,6 +1,6 @@
 body
 {
-	background: yellow;
+	background: #FFDD17;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	margin: 0;
@@ -10,7 +10,7 @@ body
 
 footer
 {
-	background: gray;
+	background: #444A48;
 }
 
 footer form
@@ -46,7 +46,7 @@ h1 img
 
 header
 {
-	background: gray;
+	background: #444A48;
 	height: 80px;
 	position: relative;
 	text-align: center;
@@ -128,6 +128,7 @@ nav ul
 {	
 	margin: 0 auto;
 	max-width: 1000px;
+	overflow: hidden;
 }
 
 .banner-bar-indicator

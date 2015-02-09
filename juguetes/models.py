@@ -6,7 +6,8 @@ class Pelota(models.Model):
 	descripcion = models.TextField()
 	boton_comprar = models.TextField()
 	foto = models.ImageField(upload_to='fotos_pelotas')
-
+	fecha_creacion = models.DateTimeField(auto_now_add=True)
+	
 	def __unicode__(self):
 		return self.nombre
 
