@@ -22,7 +22,7 @@
 		<h2>{{pechera.nombre}}</h2>
 		<h3>{{pechera.precio}}</h3>
 		<p>{{pechera.descripcion}}</p>
-		{{pechera.boton_comprar}}
+		{{pechera.boton_comprar | safe}}
 	</div>
 </section>
 {% endblock content%}

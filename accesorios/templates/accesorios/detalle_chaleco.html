@@ -22,7 +22,7 @@
 		<h2>{{chaleco.nombre}}</h2>
 		<h3>{{chaleco.precio}}</h3>
 		<p>{{chaleco.descripcion}}</p>
-		{{chaleco.boton_comprar}}
+		{{chaleco.boton_comprar | safe}}
 	</div>
 </section>
 {% endblock content%}

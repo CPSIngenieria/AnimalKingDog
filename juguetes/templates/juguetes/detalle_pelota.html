@@ -22,7 +22,7 @@
 		<h2>{{pelota.nombre}}</h2>
 		<h3>{{pelota.precio}}</h3>
 		<p>{{pelota.descripcion}}</p>
-		{{pelota.boton_comprar}}
+		{{pelota.boton_comprar | safe}}
 	</div>
 </section>
 {% endblock content%}

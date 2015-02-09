@@ -22,7 +22,7 @@
 		<h2>{{collar.nombre}}</h2>
 		<h3>{{collar.precio}}</h3>
 		<p>{{collar.descripcion}}</p>
-		{{collar.boton_comprar}}
+		{{collar.boton_comprar | safe}}
 	</div>
 </section>
 {% endblock content%}

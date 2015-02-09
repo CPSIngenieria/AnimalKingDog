@@ -22,7 +22,7 @@
 		<h2>{{correa.nombre}}</h2>
 		<h3>{{correa.precio}}</h3>
 		<p>{{correa.descripcion}}</p>
-		{{correa.boton_comprar}}
+		{{correa.boton_comprar | safe}}
 	</div>
 </section>
 {% endblock content%}
