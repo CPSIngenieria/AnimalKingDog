@@ -1,0 +1,28 @@
+{% extends 'landing/base.html' %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Comprar pelota - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'juguetes/css/detalle_pelota.css' %}">
+<script src="{% static 'juguetes/js/detalle_pelota.js' %}"></script>
+{% endblock statics %}
+
+{% block banner%} {% endblock banner%}
+
+{% block content%}
+<section id="product-container">
+	<figure>
+		<img src="{{pelota.foto.url}}" alt="" width='350' height='350'>
+	</figure>
+	<div>
+		<h2>{{pelota.nombre}}</h2>
+		<h3>{{pelota.precio}}</h3>
+		<p>{{pelota.descripcion}}</p>
+		{{pelota.boton_comprar}}
+	</div>
+</section>
+{% endblock content%}

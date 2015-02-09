@@ -1,0 +1,28 @@
+{% extends 'landing/base.html' %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Comprar correa - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'accesorios/css/detalle_correa.css' %}">
+<script src="{% static 'accesorios/js/detalle_correa.js' %}"></script>
+{% endblock statics %}
+
+{% block banner%} {% endblock banner%}
+
+{% block content%}
+<section id="product-container">
+	<figure>
+		<img src="{{correa.foto.url}}" alt="" width='350' height='350'>
+	</figure>
+	<div>
+		<h2>{{correa.nombre}}</h2>
+		<h3>{{correa.precio}}</h3>
+		<p>{{correa.descripcion}}</p>
+		{{correa.boton_comprar}}
+	</div>
+</section>
+{% endblock content%}

@@ -1,0 +1,28 @@
+{% extends 'landing/base.html' %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Comprar pechera - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'accesorios/css/detalle_pechera.css' %}">
+<script src="{% static 'accesorios/js/detalle_pechera.js' %}"></script>
+{% endblock statics %}
+
+{% block banner%} {% endblock banner%}
+
+{% block content%}
+<section id="product-container">
+	<figure>
+		<img src="{{pechera.foto.url}}" alt="" width='350' height='350'>
+	</figure>
+	<div>
+		<h2>{{pechera.nombre}}</h2>
+		<h3>{{pechera.precio}}</h3>
+		<p>{{pechera.descripcion}}</p>
+		{{pechera.boton_comprar}}
+	</div>
+</section>
+{% endblock content%}
