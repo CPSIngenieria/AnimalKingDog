@@ -9,11 +9,13 @@ def home(request):
 	pecheras = Pechera.objects.order_by('-fecha_creacion')[:4]
 	chalecos = Chaleco.objects.order_by('-fecha_creacion')[:4]
 	collares = Collar.objects.order_by('-fecha_creacion')[:4]
+	pelotas = Pelota.objects.order_by('-fecha_creacion')[:4]
 	context = {
 		'correas':correas,
 		'pecheras':pecheras,
 		'chalecos':chalecos,
 		'collares':collares,
+		'pelotas':pelotas,
 	}
 	return render(request, 'landing/landing.html', context)
 

@@ -1,1 +1,31 @@
-<h1>Lista correas</h1>
+{% extends "landing/base.html" %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Correas - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'accesorios/css/lista_correas.css' %}">
+<script src="{% static 'accesorios/js/lista_correas.js' %}"></script>
+{% endblock statics %}
+
+{% block content%} 
+<section id="correas" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Correas</h2>
+	{% if not correas %}
+	<h2>No hay correas para mostrar</h2>
+	{% else%}
+	{% for correa in correas %}
+	<article class="product-container">
+		<figure>
+			<img src="{{correa.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+</section>
+{% endblock content%} 

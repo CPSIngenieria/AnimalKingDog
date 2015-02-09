@@ -91,4 +91,24 @@
 		<a href="{% url 'accesorios:lista_collares' %}">Ver lista completa</a>
 	</div>
 </section>
+
+<section id="pelotas" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Pelotas</h2>
+	{% if not pelotas %}
+	<h2>No hay pelotas para mostrar</h2>
+	{% else%}
+	{% for pelota in pelotas %}
+	<article class="product-container">
+		<figure>
+			<img src="{{pelota.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+	<div class="visit-list-button">
+		<a href="{% url 'juguetes:lista_pelotas' %}">Ver lista completa</a>
+	</div>
+</section>
 {% endblock content%}

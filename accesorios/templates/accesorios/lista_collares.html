@@ -1,1 +1,31 @@
-<h1>Lista collares</h1>
+{% extends "landing/base.html" %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Collares - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'accesorios/css/lista_collares.css' %}">
+<script src="{% static 'accesorios/js/lista_collares.js' %}"></script>
+{% endblock statics %}
+
+{% block content%} 
+<section id="collares" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Collares</h2>
+	{% if not collares %}
+	<h2>No hay collares para mostrar</h2>
+	{% else%}
+	{% for collar in collares %}
+	<article class="product-container">
+		<figure>
+			<img src="{{collar.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+</section>
+{% endblock content%} 

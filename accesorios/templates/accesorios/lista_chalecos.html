@@ -1,1 +1,31 @@
-<h1>Lista chalecos</h1>
+{% extends "landing/base.html" %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Chalecos - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'accesorios/css/lista_chalecos.css' %}">
+<script src="{% static 'accesorios/js/lista_chalecos.js' %}"></script>
+{% endblock statics %}
+
+{% block content%} 
+<section id="chalecos" class="product-list-container">
+	<div class="product-list-separator"></div>
+	<h2 class="product-list-title">Chalecos</h2>
+	{% if not chalecos %}
+	<h2>No hay chalecos para mostrar</h2>
+	{% else%}
+	{% for chaleco in chalecos %}
+	<article class="product-container">
+		<figure>
+			<img src="{{chaleco.foto.url}}" alt="" width='220' height='220'>
+		</figure>
+		<a href="#">Detalles</a>
+	</article>
+	{% endfor %}
+	{% endif %}
+</section>
+{% endblock content%} 
