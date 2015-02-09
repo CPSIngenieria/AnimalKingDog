@@ -23,7 +23,7 @@
 		<figure>
 			<img src="{{correa.foto.url}}" alt="" width='220' height='220'>
 		</figure>
-		<a href="#">Detalles</a>
+		<a href="{% url 'accesorios:detalle_correa' correa.id %}">Detalles</a>
 	</article>
 	{% endfor %}
 	{% endif %}

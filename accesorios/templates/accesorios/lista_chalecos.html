@@ -23,7 +23,7 @@
 		<figure>
 			<img src="{{chaleco.foto.url}}" alt="" width='220' height='220'>
 		</figure>
-		<a href="#">Detalles</a>
+		<a href="{% url 'accesorios:detalle_chaleco' chaleco.id %}">Detalles</a>
 	</article>
 	{% endfor %}
 	{% endif %}
