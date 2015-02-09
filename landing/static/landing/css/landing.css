@@ -27,6 +27,17 @@
 	font-style: italic;
 	padding: 0.2em 2em;
 	text-decoration: none;
+	text-shadow: 1px 1px 1px black;
+}
+
+.product-container a:hover
+{
+	background: #444A48;
+}
+
+.product-container a:active
+{
+	background: #FFDD17;
 }
 
 .product-list-container
@@ -37,7 +48,7 @@
 
 .product-list-separator
 {
-	background: black;
+	background: gray;
 	height: 2px;
 	width: 100%;
 }
@@ -48,6 +59,7 @@
 	font-size: 2rem;
 	font-style: italic;
 	font-weight: 400;
+	text-shadow: 1px 1px 1px black;
 }
 
 .visit-list-button
@@ -59,7 +71,18 @@
 {
 	background: #444A48;
 	border-radius: 1em;
+	box-shadow: 1px 2px 1px black;
 	color: white;
 	padding: 0.3em 0.5em;
 	text-decoration: none;
+}
+
+.visit-list-button a:hover
+{
+	background: gray;
+}
+
+.visit-list-button a:active
+{
+	background: #FFDD17;
 }
