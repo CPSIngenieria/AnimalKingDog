@@ -1,0 +1,32 @@
+{% extends "landing/base.html" %}
+
+{% load staticfiles %}
+
+{% block description %}Descripcion del negocio{% endblock description %}
+
+{% block title %}Contacto - AnimalKingDog{% endblock title %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'landing/css/contacto.css' %}">
+<script src="{% static 'landing/js/contacto.js' %}"></script>
+{% endblock statics %}
+
+{% block banner %} {% endblock banner %}
+
+{% block content %} 
+<section id="container">
+	<h2>Contacto</h2>
+	<p>Hacemos ventas al por mayor, en bogota y en todo Colombia. Tambien tenemos puntos de venta en Bogota</p>
+	<p>Por favor, dejanos tus datos para contactarnos contigo lo mas pronto posible</p>
+	<form action="{% url 'landing:contactar' %}" method="post">
+		{% csrf_token %}
+		<label for="nombre">Nombre completo</label>
+		<input type="text" name="nombre" id="nombre"><br>
+		<label for="email">Correo electronico</label>
+		<input type="email" name="email" id="email"><br>
+		<p>Haz una consulta si deseas</p>
+		<textarea name="consulta" id="consulta" rows="5" cols="70"></textarea><br>
+		<input type="submit" value="Enviar">
+	</form>
+</section>
+{% endblock content %}

@@ -1,0 +1,74 @@
+#container form
+{
+	background: #444A48;
+	border-radius: 1em;
+	box-shadow: black 2px 2px 1px;
+	padding: 1rem;
+}
+
+#container form label, form p
+{
+	color: white;
+}
+
+#container form input[type='text'],#container form input[type='email']
+{
+	margin: 0.3rem;
+}
+
+#containerform input[type='text']:focus,#container form input[type='email']:focus,#container form textarea:focus
+{
+	outline-color: #FFDD17;
+}
+
+#container form input[type='text'],#container form input[type='email'],#container form textarea
+{
+	box-shadow: 1px 1px 1px black inset;
+}
+
+#container form input[type='submit']
+{
+	background: gray;
+	border-radius: 0.3em;
+	color: black;
+	margin-top: 0.5em;
+	padding: 0.5rem 0.7rem;
+}
+
+#container form input[type='submit']:hover
+{
+	background: #444A48;
+	color: white;
+}
+
+#container form input[type='submit']:active
+{
+	background: #FFDD17;
+}
+
+#container
+{
+	background: white;
+	padding: 3em;
+}
+
+#container h2, #container p
+{
+	margin: 0;
+	padding: 0;
+}
+
+#container h2
+{
+	color: gray;
+	font-size: 2rem;
+	font-style: italic;
+	font-weight: 400;
+	padding-bottom: 1.5em;
+	text-shadow: 1px 1px 1px black;
+}
+
+#container p
+{
+	padding: 0.7rem 0;
+}

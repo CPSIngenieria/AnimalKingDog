@@ -2,7 +2,7 @@
 {
 	display: inline-block;
 	width: 24%;
-	padding-bottom: 1.6em;
+	padding-bottom: 1.5em;
 }
 
 .product-container figure
@@ -44,7 +44,7 @@
 .product-list-container
 {
 	background: white;
-	padding-bottom: 1.5em;
+	padding-bottom: 0.5em;
 }
 
 .product-list-separator

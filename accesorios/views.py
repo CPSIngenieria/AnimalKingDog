@@ -3,7 +3,17 @@ from accesorios.models import Correa, Chaleco, Pechera, Collar
 
 
 def lista(request):
-	return render(request, 'accesorios/lista_accesorios.html')
+	correas = Correa.objects.all().order_by('-fecha_creacion')
+	chalecos = Chaleco.objects.all().order_by('-fecha_creacion')
+	pecheras = Pechera.objects.all().order_by('-fecha_creacion')
+	collares = Collar.objects.all().order_by('-fecha_creacion')
+	context = {
+		'correas':correas,
+		'chalecos':chalecos,
+		'pecheras':pecheras,
+		'collares':collares,
+	}
+	return render(request, 'accesorios/lista_accesorios.html',context)
 
 def lista_correas(request):
 	correas = Correa.objects.all().order_by('-fecha_creacion')

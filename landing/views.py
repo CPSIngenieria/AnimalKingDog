@@ -21,3 +21,6 @@ def home(request):
 
 def contactar(request):
 	return HttpResponseRedirect(reverse('landing:home'))
+
+def contacto(request):
+	return render(request, 'landing/contacto.html')
